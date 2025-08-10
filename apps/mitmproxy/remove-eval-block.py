@@ -1,6 +1,10 @@
 from mitmproxy import http
 
 def response(flow: http.HTTPFlow):
+    # Solo actuar en LinkedIn
+    if "linkedin.com" not in flow.request.pretty_host:
+        return
+
     # Borra CSP en header
     if "Content-Security-Policy" in flow.response.headers:
         del flow.response.headers["Content-Security-Policy"]

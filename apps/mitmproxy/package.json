@@ -1,5 +1,7 @@
 {
+  "name": "mitmproxy",
+  "displayName": "mitmproxy",
   "scripts": {
-    "dev": " mitmweb -s remove-eval-block.py"
+    "dev": "mitmweb -s remove-eval-block.py"
   }
 }
